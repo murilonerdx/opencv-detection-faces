@@ -11,8 +11,8 @@ import static org.opencv.imgproc.Imgproc.COLOR_BGR2GRAY;
 public class OpenCVTest {
 
     public static void main(String[] args) {
-            System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-            System.out.println(Core.VERSION);
+        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+        System.out.println(Core.VERSION);
 
 
         Mat imagemColorida = imread("src/com/murilonerdx/deteccao/opencv_java.jpg", CV_LOAD_IMAGE_COLOR);
