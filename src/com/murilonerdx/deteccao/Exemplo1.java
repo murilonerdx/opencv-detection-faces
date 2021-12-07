@@ -22,7 +22,13 @@ public class Exemplo1 {
         CascadeClassifier classificador =
                 new CascadeClassifier("cascades/haarcascade_frontalface_default.xml");
         MatOfRect facesDetectadas = new MatOfRect();
-        classificador.detectMultiScale(imagemCinza, facesDetectadas);
+        classificador.detectMultiScale(imagemCinza,
+                facesDetectadas,
+                1.4,
+                1,
+                0,
+                new Size(30,30),
+                new Size(100,100));
 
         System.out.println(facesDetectadas.toArray().length);
 
