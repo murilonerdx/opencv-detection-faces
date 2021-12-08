@@ -13,7 +13,7 @@ public class Exemplo2 {
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
         System.out.println(Core.VERSION);
 
-        Mat imagemColorida = imread("pessoas/pessoas4.jpg");
+        Mat imagemColorida = imread("pessoas/beatles.jpg");
         Mat imagemCinza = new Mat();
 
         Imgproc.cvtColor(imagemColorida,
@@ -43,7 +43,8 @@ public class Exemplo2 {
         MatOfRect olhosDetectados = new MatOfRect();
         CascadeClassifier classificadorOlho =
                 new CascadeClassifier("cascades/haarcascade_eye.xml");
-        classificadorOlho.detectMultiScale(imagemCinza, olhosDetectados);
+        classificadorOlho.detectMultiScale(imagemCinza,
+                olhosDetectados);
 
         for(Rect rect : olhosDetectados.toArray()){
             Imgproc.rectangle(imagemColorida,
